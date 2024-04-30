@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root 'okashi#index'
+  root 'okashies#index'
+  get '/okashies/random', to: 'okashies#random'
 end
