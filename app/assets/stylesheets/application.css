@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+body {font-family: 'ChihayaJunP';
+  background-color: antiquewhite;
+}
+
+.container {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px; 
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.aspect-ratio {
+  position: relative;
+  width: 200px; /* 固定幅 */
+  padding-top: 100%; /* 正方形のアスペクト比 (1:1) */
+}

@@ -22,9 +22,11 @@ class AccessLogApi
         data = JSON.parse(response.body, symbolize_names: true)
         item = data[:item]
         relevant_data = {
+          id: item[:id],
           name: item[:name],
           image: item[:image],
-          price: item[:price]
+          price: item[:price],
+          regist: item[:regist]
         }
 
         relevant_data

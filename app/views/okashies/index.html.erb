@@ -1,5 +1,18 @@
-<h1><%= @access_logs[:name] %></h1>
-<h1><%= image_tag @access_logs[:image] %></h1>
-<h1><%= @access_logs[:price] %></h1>
+<main class='container mx-auto px-5 flex flex-col items-center justify-center; display: flex; justify-content: center;'>
+  <h1 style='margin-top: 50px;'> 図鑑NO. <%= @access_logs[:id] %> </h1>
+  <div style="position: relative; width: 200px; height: 200px;">
+  <!-- 背景画像 -->
+  <%= image_tag asset_path('100.png'), size: "300x300", alt: 'Background Image' %>
 
+  <!-- 上に重ねる画像 -->
+  <%= image_tag @access_logs[:image], size: "200x200", style: 'position: absolute; top: 0; left: 0;' %>
+  </div>
+  <h1><%= @access_logs[:name] %></h1>
+  <% if @access_logs[:price] == 0 ||  @access_logs[:price].empty? %>
+    <h1> 金額不明 </h1>
+  <% else %>
+    <h1><%= @access_logs[:price] %> 円</h1>
+  <% end %>
+  <h1>販売確認日: <%= @access_logs[:regist] %></h1>
+</main>
 
