@@ -19,7 +19,7 @@
   <div class="button-container" style="display: flex; justify-content: space-between; gap: 20px;">
     <%= link_to 'ホームへ', root_path, class: "btn-image", style: 'background-color: #FAD7F8' %>
     <%= link_to 'xで共有', 
-      "https://twitter.com/intent/tweet?url=https://kashi-tdbl.onrender.com/&text=#{CGI.escape("#{@access_logs[:name]}")}をGETしたぞ!!!",
+      "https://twitter.com/intent/tweet?url=https://kashi-tdbl.onrender.com/&text=#{CGI.escape("#{@access_logs[:name]}をGETしたぞ!!!#お菓子図鑑")}",
       target: '_blank', class: "btn-image", style: 'background-color: #D7E6FA' %>
     <%= link_to '次へ', okashies_path, class: "btn-image", style: 'background-color: #99D9EA' %>
   </div>
