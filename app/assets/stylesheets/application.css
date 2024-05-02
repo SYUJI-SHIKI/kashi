@@ -17,6 +17,13 @@ body {font-family: 'ChihayaJunP';
   background-color: #faebd7;
 }
 
+.main-title{
+  position: absolute;
+  bottom: 20px;
+  font-size: 32px;
+  line-height: 32px;
+}
+
 .text{
   margin-top: 10px;
   text-align: center;
@@ -24,6 +31,20 @@ body {font-family: 'ChihayaJunP';
   font-size: 17px;
 }
 
+.home-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 149px;
+  height: 41px;
+  background-color: #99D9EA;
+  border-radius: 10px;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 170%;
+  color: black'
+}
 .container {
   margin: 0 auto;
   padding-left: 20px;
@@ -78,6 +99,28 @@ body {font-family: 'ChihayaJunP';
     height: auto; 
   }
 
+  .main-title{
+    position: absolute;
+    bottom: 5px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .home-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 149px;
+    height: 41px;
+    background-color: #99D9EA;
+    border-radius: 10px;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    color: black'
+  }
+
   .text{
     margin-top: 10px;
     text-align: center;
@@ -96,7 +139,6 @@ body {font-family: 'ChihayaJunP';
     font-size: 16px; /* 文字を小さくする */
   }
 
-  /* フレックスボックスの方向を縦向きにする */
   .flex {
     flex-direction: column; /* 縦方向に変更 */
   }
@@ -105,15 +147,15 @@ body {font-family: 'ChihayaJunP';
   .justify-center {
     justify-content: center;
   }
+
   .item-name {
     position: static; 
     text-align: center; 
-    margin-top: 10px; /* 上部に余白 */
+    margin-top: 20px; /* 上部に余白 */
     white-space: pre-wrap;
     font-size: 23px;
   }
 
-  /* 販売確認日のスタイル調整 */
   .sale-date {
     text-align: center; 
     margin-top: 10px;
