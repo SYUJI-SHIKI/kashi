@@ -1,23 +1,22 @@
 <main class='container mx-auto px-5 flex flex-col items-center justify-center;'>
   <h1 style='margin-top: 50px;'> 図鑑NO. <%= @access_logs[:id] %> </h1>
-  <div style="position: relative; width: 200px; height: 200px;">
+  <div class='index-image'>
   <!-- 背景画像 -->
-  <%= image_tag '100.png', size: "350x300", style: 'position: absolute; top: -10px; left: -70px;' %>
-
-  <%= link_to "https://www.google.com/search?q=#{CGI.escape(@access_logs[:name])}", target: "_blank" do %>
-    <%= image_tag @access_logs[:image], size: "200x200", style: 'position: absolute; top: 50px;' %>
-  <% end %>
-  </div>
-  <h1 style='position: absolute; top: 360px'><%= @access_logs[:name] %></h1>
-  <div style='margin-top: 100px'>
-    <% if @access_logs[:price] == 0 ||  @access_logs[:price].empty? %>
-      <h1> 金額不明 </h1>
-    <% else %>
-      <h1>金額: <%= @access_logs[:price] %> 円</h1>
+    <%= image_tag '100.png', size: "350x300", style: 'position: absolute; top: -10px; left: -70px;' %>
+    <%= link_to "https://www.google.com/search?q=#{CGI.escape(@access_logs[:name])}", target: "_blank" do %>
+      <%= image_tag @access_logs[:image], size: "200x200", style: 'position: absolute; top: 50px;' %>
     <% end %>
   </div>
-  <h1 style='margin-top: 0px'>販売確認日: <%= @access_logs[:regist] %></h1>
-  <div style="display: flex; justify-content: space-between; gap: 20px;">
+  <h1 class='item-name' style='position: absolute; top: 360px'><%= @access_logs[:name] %></h1>
+  <div style='margin-top: 90px'>
+    <% if @access_logs[:price] == 0 ||  @access_logs[:price].empty? %>
+      <h1 class="sale-date"> 金額: 不明 </h1>
+    <% else %>
+      <h1 class="sale-date">金額: <%= @access_logs[:price] %> 円</h1>
+    <% end %>
+  </div>
+  <h1 class="sale-date" style='margin-top: 0px'>販売確認日: <%= @access_logs[:regist] %></h1>
+  <div class="button-container" style="display: flex; justify-content: space-between; gap: 20px;">
     <%= link_to 'ホームへ', root_path, class: "btn-image", style: 'background-color: #FAD7F8' %>
     <%= link_to 'xで共有', 
       "https://twitter.com/intent/tweet?url=https://kashi-tdbl.onrender.com/&text=#{CGI.escape("#{@access_logs[:name]}")}をGETしたぞ!!!",

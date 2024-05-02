@@ -17,6 +17,13 @@ body {font-family: 'ChihayaJunP';
   background-color: #faebd7;
 }
 
+.text{
+  margin-top: 10px;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 17px;
+}
+
 .container {
   margin: 0 auto;
   padding-left: 20px;
@@ -45,6 +52,11 @@ body {font-family: 'ChihayaJunP';
   padding-top: 100%;
 }
 
+.index-image{
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
 .btn-image {
   display: flex;
   align-items: center;
@@ -57,4 +69,60 @@ body {font-family: 'ChihayaJunP';
   text-decoration: none;
   font-size: 20px;
   color: black'
+}
+
+@media (max-width: 600px) {
+
+  .small-image{
+    width:110%; 
+    height: auto; 
+  }
+
+  .text{
+    margin-top: 10px;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 15px;
+  }
+  /* コンテナの余白を調整 */
+  .container {
+    padding-left: 10px; /* パソコンより狭くする */
+    padding-right: 10px; /* 同上 */
+  }
+
+  /* ボタンのサイズを調整 */
+  .btn-image {
+    width: 80px; /* 幅を小さくする */
+    font-size: 16px; /* 文字を小さくする */
+  }
+
+  /* フレックスボックスの方向を縦向きにする */
+  .flex {
+    flex-direction: column; /* 縦方向に変更 */
+  }
+
+  /* センター配置 */
+  .justify-center {
+    justify-content: center;
+  }
+  .item-name {
+    position: static; 
+    text-align: center; 
+    margin-top: 10px; /* 上部に余白 */
+    white-space: pre-wrap;
+    font-size: 23px;
+  }
+
+  /* 販売確認日のスタイル調整 */
+  .sale-date {
+    text-align: center; 
+    margin-top: 10px;
+    white-space: nowrap;
+    font-size: 23px;
+  }
+
+  .button-container {
+    align-items: center; 
+    gap: 10px; /* 間隔を追加 */
+  }
 }
