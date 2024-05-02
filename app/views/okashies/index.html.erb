@@ -4,7 +4,6 @@
   <!-- 背景画像 -->
   <%= image_tag '100.png', size: "350x300", style: 'position: absolute; top: -10px; left: -70px;' %>
 
-  <!-- 上に重ねる画像 -->
   <%= link_to "https://www.google.com/search?q=#{CGI.escape(@access_logs[:name])}", target: "_blank" do %>
     <%= image_tag @access_logs[:image], size: "200x200", style: 'position: absolute; top: 50px;' %>
   <% end %>
